@@ -1,5 +1,26 @@
 .navbar{
     background-color: white;
-    border-color: grey;
-    border-bottom: 5px;
+    size: 50px;
+}
+div{
+    border-bottom: 2px solid grey;
+}
+.navbar-links {
+    display: flex;
+    list-style: wrap;
+    align-items: center;
+}
+
+.navbar-links-item{
+    padding: 3px;
+    margin: 0;
+    display: inline-block;
+}
+
+.navbar-logo{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
 }
