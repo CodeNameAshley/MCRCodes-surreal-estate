@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/NavBar.css";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 
 export default function NavBar() {
@@ -7,8 +8,12 @@ export default function NavBar() {
     <div className="navbar">
       <ul className="navbar-links">
         <img className="navbar-logo" alt="surreal estate" src={logo} />
-        <p className="navbar-links-item">View Properties</p>
-        <p className="navbar-links-item">Add a Property</p>
+        <Link className="navbar-links-item" to="/">
+          View Properties
+        </Link>
+        <Link className="navbar-links-item" to="/add-property">
+          Add a Property
+        </Link>
       </ul>
     </div>
   );
