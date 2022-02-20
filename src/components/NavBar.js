@@ -7,10 +7,11 @@ export default function NavBar() {
   return (
     <div className="navbar">
       <ul className="navbar-links">
-        <img className="navbar-logo" alt="surreal estate" src={logo} />
         <Link className="navbar-links-item" to="/">
           View Properties
         </Link>
+
+        <img className="navbar-logo" alt="surreal estate" src={logo} />
         <Link className="navbar-links-item" to="/add-property">
           Add a Property
         </Link>

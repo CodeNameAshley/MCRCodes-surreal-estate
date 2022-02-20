@@ -1,5 +1,6 @@
 .navbar{
     background-color: white;
+    justify-content: center;
 }
 
 div{
@@ -9,7 +10,7 @@ div{
 .navbar-links {
     display: flex;
     list-style: wrap;
-    align-items: center;
+    justify-content: center;
 }
 
 .navbar-links-item{
@@ -22,4 +23,5 @@ div{
     width: 20%;
     height: 15%;
     overflow: hidden;
+    align-items: center;
 }

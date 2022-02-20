@@ -3,3 +3,14 @@
   padding: 0;
   background-color: lightgrey;
 }
+
+.surreal-estate-image{
+  width: auto; 
+  clip-path: inset(0% 0px 30% 0px);
+  overflow: hidden;
+  max-width: 100%;
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+   
