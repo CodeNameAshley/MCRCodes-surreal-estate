@@ -1,6 +1,16 @@
 .AddProperty{
     padding: 10px;
+    font-size: 15px;
+    display: flex;
+    list-style: wrap;
+    justify-content: center;
+    background-color: lightgray;
+
 }
 form {
-    background-color: blueviolet;
+    background-color: lightgray;
+}
+button {
+    color: green;
+    size: auto;
 }

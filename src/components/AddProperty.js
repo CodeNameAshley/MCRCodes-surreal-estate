@@ -11,6 +11,7 @@ export default function AddProperty() {
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [type, setType] = useState(initialState.fields);
 
   const handleAddProperty = (event) => {
     event.preventDefault();
@@ -19,16 +20,19 @@ export default function AddProperty() {
 
   const handleAddType = (event) => {
     event.preventDefault();
-    console.log(fields);
+    console.log(type);
   };
-
   const handleFieldChange = (event) => {
     setFields({ ...fields, [event.target.name]: event.target.value });
   };
+
+  const handleTypeChange = (event) =>
+    setType({ ...type, [event.target.name]: event.target.value });
+
   return (
     <div className="AddProperty">
       Add property page
-      <form onSubmit={handleAddProperty}>
+      <form className="city-form" onSubmit={handleAddProperty}>
         <label htmlFor="title">
           <select
             id="city"
@@ -39,7 +43,7 @@ export default function AddProperty() {
             <option value="Manchester"> Manchester </option>
             <option value="Leeds"> Leeds </option>
             <option value="Sheffield"> Sheffield </option>
-            <option value="Liverpool"> Sheffield </option>
+            <option value="Liverpool"> Liverpool </option>
           </select>
           <input
             type="text"
@@ -49,15 +53,14 @@ export default function AddProperty() {
             onChange={handleFieldChange}
           />
         </label>
-        <button type="button" id="button" aria-label="submit button" />
       </form>
-      <form>
+      <form className="property-type-form" onSubmit={handleAddType}>
         <label htmlFor="title">
           <select
             id="type"
             name="type"
-            value={fields.type}
-            onChange={handleAddType}
+            value={type.type}
+            onChange={handleTypeChange}
           >
             <option value="Flat"> Flat </option>
             <option value="Semi-Detached"> Semi-Detached </option>
@@ -70,10 +73,13 @@ export default function AddProperty() {
             type="text"
             id="title"
             name="title"
-            value={fields.type}
-            onChange={handleFieldChange}
+            value={type.title}
+            onChange={handleTypeChange}
           />
         </label>
+        <button type="button" id="button" aria-label="submit button">
+          Search
+        </button>
       </form>
     </div>
   );
