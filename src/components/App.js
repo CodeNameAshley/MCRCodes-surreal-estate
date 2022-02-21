@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Properties from "./Properties";
 import AddProperty from "./AddProperty";
-import houses from "../images/acnh-surreal-estate.jpg";
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
       <div className="App">
         {/* <header className="App-header">Surreal Estate</header> */}
         <NavBar />
-        <img className="surreal-estate-image" src={houses} alt="House" />
         <Routes>
           <Route exact path="/" element={<Properties />} />
           <Route exact path="/add-property" element={<AddProperty />} />

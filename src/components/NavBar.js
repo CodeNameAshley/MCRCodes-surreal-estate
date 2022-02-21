@@ -12,6 +12,7 @@ export default function NavBar() {
         </Link>
 
         <img className="navbar-logo" alt="surreal estate" src={logo} />
+
         <Link className="navbar-links-item" to="/add-property">
           Add a Property
         </Link>
