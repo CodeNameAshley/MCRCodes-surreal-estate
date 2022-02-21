@@ -1,8 +1,9 @@
-
 .App {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   background-color: white;
+  background-image: url("../images/acnh-house.jpeg");
+  background-size: cover;
 }
 a:link {
   text-decoration: none;

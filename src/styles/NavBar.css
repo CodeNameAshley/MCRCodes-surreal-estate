@@ -7,19 +7,26 @@
 
 .navbar-links {
     display: flex;
-    list-style: wrap;
+    margin-block-start: auto;
+    padding-inline-start: 0px;
     justify-content: center;
+    font-size: 17px;
+    /* margin: 10px; */
 }
 
 .navbar-links-item{
-    padding: 30px;
-    margin: 0;
+    padding-top: auto;
+    margin: 10px;
     display: inline-block;
 }
 
 .navbar-logo{
     width: 25%;
+    max-width: 200px;
     height: 15%;
-    overflow: hidden;
     align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
 }

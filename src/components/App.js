@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+// to start docker use docker-compose up in cd surreal-estate-api
