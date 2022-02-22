@@ -1,9 +1,11 @@
 .App {
   margin: auto;
   padding: auto;
-  background-color: white;
-  background-image: url("../images/acnh-house.jpeg");
-  background-size: cover;
+  /* background-color: white; */
+  /* background-image: url("../images/acnh-house.jpeg");
+  background-size: cover; */
+  backdrop-filter: blur(5px);
+  
 }
 a:link {
   text-decoration: none;
@@ -19,6 +21,13 @@ a:hover {
   color: black;
   transform: scale(1.2);
   transition: 500ms;
+}
+
+.background-image{
+  background-image: url("../images/acnh-house.jpeg");
+  background-size: cover;
+  width: 100%;
+  overflow: auto;
 }
 
 .surreal-estate-image{

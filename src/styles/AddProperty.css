@@ -16,10 +16,12 @@ body {
     justify-content: center;
 
     margin: auto;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 
-    padding: 10px;
+    padding: 0px;
+    padding-bottom: 10px;
+    padding-top: 5px;
     
     text-align: center;
 
@@ -39,13 +41,15 @@ button {
     width: 70%;
     border: white;
     border-radius: 2px;
+    background-color: rgb(255, 240, 221);
     box-sizing: border-box;
     justify-content: center;
     /* margin: 2px 0; */
-    margin-top: 10px;
+    margin-top: -5px;
     margin-bottom: 20px;
     padding: 12px 20px;
     text-align: center;
+    font-weight: bold;
 }
 
 .input-field{

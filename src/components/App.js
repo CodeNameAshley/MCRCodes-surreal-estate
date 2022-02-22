@@ -1,20 +1,24 @@
 import React from "react";
 import "../styles/App.css";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Properties from "./Properties";
 import AddProperty from "./AddProperty";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div>
+    <div className="background-image">
       <div className="App">
-        {/* <header className="App-header">Surreal Estate</header> */}
-        <NavBar />
-        <Routes>
-          <Route exact path="/" element={<Properties />} />
-          <Route exact path="/add-property" element={<AddProperty />} />
-        </Routes>
+        <header className="App-header">Surreal Estate</header>
+        <Router>
+          <NavBar />
+          <Routes>
+            <Route exact path="/" element={<Properties />} />
+            <Route exact path="/add-property" element={<AddProperty />} />
+          </Routes>
+          <Footer />
+        </Router>
       </div>
     </div>
   );

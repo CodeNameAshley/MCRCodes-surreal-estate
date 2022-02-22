@@ -1,0 +1,13 @@
+.footer {
+    background-color: white;
+    border-top: solid grey;
+    border-width: 5px;
+    display: inline-block;
+    font-size: 15px;
+    justify-content: center;
+    margin-block-start: auto;
+    padding-inline-start: 0px;
+    width: 100%;
+    text-align: center;
+}
+

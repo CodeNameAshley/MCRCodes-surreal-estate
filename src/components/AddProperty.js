@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/AddProperty.css";
 import axios from "axios";
+import Alert from "./Alert";
 
 export default function AddProperty() {
   const initialState = {
@@ -13,9 +14,14 @@ export default function AddProperty() {
       city: "",
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddFields = (event) => {
     event.preventDefault();
@@ -29,11 +35,17 @@ export default function AddProperty() {
         city: fields.city,
         email: fields.email,
       })
-      .then((response) => {
-        console.log(response);
+      .then(() => {
+        setAlert({
+          message: "Your Property Has Been Added",
+          isSuccess: true,
+        });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(() => {
+        setAlert({
+          message: "Attempt Failed! Please Try Again Later",
+          isSuccess: false,
+        });
       });
   };
 
@@ -45,6 +57,9 @@ export default function AddProperty() {
     <div className="AddProperty">
       <h1 className="AddProperty-Header"> Add A Property</h1>
       <form className="property-title">
+        {alert.message && (
+          <Alert message={alert.message} success={alert.isSuccess} />
+        )}
         <div className="input">
           <label htmlFor="title" className="input-label">
             <p> Name of Property </p>
@@ -75,6 +90,7 @@ export default function AddProperty() {
             >
               <option> --Choose A Property Type-- </option>
               <option value="Flat"> Flat </option>
+              <option value="Detached"> Detached </option>
               <option value="Semi-Detached"> Semi-Detached </option>
               <option value="Terraced"> Terraced </option>
               <option value="End of Terrace"> End of Terrace </option>
