@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyCard renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="property-card"
+  >
+    Rosewood
+    <br />
+    cottage - Breezy Hollow
+    <br />
+    3
+    <br />
+    2
+    <br />
+    1000
+    <br />
+    ash@acnh.com
+    <br />
+  </div>
+</DocumentFragment>
+`;
